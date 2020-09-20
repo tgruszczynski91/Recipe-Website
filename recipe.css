@@ -16,6 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -152,7 +153,6 @@ a {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
     url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190403-pancakes-066-copy-1554497284.jpeg?crop=0.777xw:0.584xh;0.115xw,0.315xh&resize=1200:*');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     max-width: 100%;
     background-size: cover;
     position: relative;
@@ -387,9 +387,6 @@ footer {
   } 
 
   @media (max-width: 600px) {
-      body {
-          overflow-x: hidden;
-      }
 
       .burger {
           cursor: pointer;
@@ -404,11 +401,11 @@ footer {
         justify-content: flex-end
       }
       .menu-ul {
+          display: none;
           position: absolute;
           right: 0px;
-          top: 14vh;
-          min-height: 50vh;
-          display: flex;
+          top: 110px;
+          height: 260px;
           flex-direction: column;
           align-items: center;
           transform: translate(100%);
@@ -416,14 +413,15 @@ footer {
       }
 
       .menu-ul li {
-          opacity: 0;
           width: 100%;
       }
 
   }
+
 /* JS BURGER TOGGLING */
   .nav-active {
       transform: translate(0%);
+      display: flex;
   }
   .toggle .line1 {
       transform: rotate(-50deg) translate(-5px, 6px)
